@@ -61,7 +61,7 @@
             <h1 class="title">Эффективные решения<br />для вашего бизнеса
                 </pre>
             </h1> 
-            <button type="button" class="button">Заказать услугу</button>
+            <button type="button" class="button" data-modal-open>Заказать услугу</button>
         </section> 
 
     <!-- Особенности -->
@@ -124,12 +124,15 @@
                 <ul class="works list">
                     <li class="item">
                         <img src="./images/box1.jpg" alt="Работа с персональным компьютером" width="370">
+                        <h3 class="works-type">Десктопные приложения</h3>
                     </li>
                     <li class="item">
                         <img src="./images/box2.jpg" alt="Работа с ноутбуком" width="370">
+                        <h3 class="works-type">Мобильные приложения</h3>
                     </li>
                     <li class="item">
                         <img src="./images/box3.jpg" alt="Работа с планшетом" width="370">
+                        <h3 class="works-type">Дизайнерские решения</h3>
                     </li>
                 </ul>
             </div>
@@ -339,8 +342,19 @@
             </ul>
         </div>
     </section>
-
     </main>
+
+    <!-- Модальное окно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="button-close" data-modal-close>
+                <svg class="icon-close" aria-hidden="true" width="11" height="11"> 
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <!-- Подвал -->
     <footer class="footer">
         <div class="container">
@@ -400,5 +414,6 @@
     
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

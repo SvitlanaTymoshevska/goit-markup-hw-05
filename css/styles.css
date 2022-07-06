@@ -49,11 +49,11 @@ address {
 /* Шапка */
 .main-nav {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 .nav {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 .logo-accent {
     margin-right: 93px;
@@ -69,11 +69,11 @@ address {
 }
 .site-nav {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 .contacts {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-left: auto;
 }
 .site-nav .item + .item,
@@ -95,6 +95,15 @@ address {
 .header .link.current {
     color: var(--accent-color);
 }
+.current::after {
+    content: '';
+    display: block;
+    margin-top: 28px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;  
+    background-color: #2196F3;
+}    
 .contact.link {
     display: flex;
     align-items: center;
@@ -227,6 +236,27 @@ address {
 .features p {
     margin-bottom: 0;
     line-height: 24px;
+}
+
+/* Примеры работ */
+.works .item {
+    position: relative;
+}
+.works-type {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Команда */
@@ -383,6 +413,50 @@ address {
     color: var(--primary-color);
     font-size: 16px;
     line-height: 1.88;
+}
+
+/* Модальное окно */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+    border-radius: 4px;
+    
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);       
+}
+.button-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: auto;
+    margin-left: auto;   
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--white-color);
 }
 
 /* Подвал */
